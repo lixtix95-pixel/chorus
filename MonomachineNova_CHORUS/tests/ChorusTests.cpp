@@ -27,7 +27,9 @@ int main(){try{
  }
  const auto elapsed=std::chrono::duration<double>(std::chrono::steady_clock::now()-started).count();
  std::cout<<"Native golden hash: "<<std::hex<<hash<<std::dec<<"; 393216 frames / "<<elapsed<<" seconds; real-time load "<<elapsed/(393216.0/44100)<<"\n";
- require(hash==0x7007ca4d75708b0full,"independent original-instruction golden hash mismatch");
+ // Pre-clamp ROM bit-exact golden hash was 0x7007ca4d75708b0f; the current hash
+ // includes the deliberate MIX=127 full-wet clamp (see ChorusCore.cpp).
+ require(hash==0x5fa13bb709f68782ull,"independent original-instruction golden hash mismatch");
 
  const char* ids[]={"DEL","DEP","SPD","MIX","FB","WID","LP","INP"};
  for(int parameter=0;parameter<8;++parameter){

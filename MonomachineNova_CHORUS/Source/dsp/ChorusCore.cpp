@@ -342,6 +342,7 @@ for(int loop1477c3=0;loop1477c3<16;++loop1477c3) { // P:1477c3 do      #<$10,>$1
 { const auto t0=0x0u;r[4]=t0; } // P:1477cb move    #>$0,r4
 { const auto t0=0x40u;r[5]=t0; } // P:1477cd move    #>$40,r5
 { const auto t0=readY((r[6]+0x7));x0=t0; } // P:1477cf move    y:(r6+$7),x0
+if(x0==0x7f0000u){x0=0x7fffffu;} // MIX=127 clamp: full wet, zero dry (deliberate deviation; ROM leaves x0=0x7f0000 -> 0x7fff/0x800000 ~0.78% dry residue)
 { const auto t0=0x7fffffu;a=q(t0); } // P:1477d0 move    #>$7fffff,a
 { a=wrap56(a-q(x0)); } // P:1477d2 sub     x0,a
 { const auto t0=readY(post(r[4],1,m[4]));y0=t0; } // P:1477d3 move    y:(r4)+,y0
