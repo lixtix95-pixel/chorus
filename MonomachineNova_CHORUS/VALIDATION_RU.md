@@ -1,4 +1,4 @@
-# Проверки MonomachineNova CHORUS 0.3.0
+# Проверки MonomachineNova CHORUS 0.3.1
 
 ## Результат
 

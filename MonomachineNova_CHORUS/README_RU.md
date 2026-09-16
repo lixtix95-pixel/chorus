@@ -1,6 +1,6 @@
 # MonomachineNova — FX CHORUS
 
-**Версия 0.3.0. Только CHORUS. JUCE / Projucer / Visual Studio.**
+**Версия 0.3.1. Только CHORUS. JUCE / Projucer / Visual Studio.**
 
 Новый небольшой проект, а не сокращённая оболочка предыдущего эмулятора.
 
