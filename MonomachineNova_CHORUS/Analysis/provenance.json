@@ -98,6 +98,16 @@
     "mismatches": 0,
     "golden_fnv1a64_le24": "7007ca4d75708b0f",
     "oracle_sm_correction": true,
-    "hardware_ab": false
-  }
+    "hardware_ab": false,
+    "note": "Comparison ran against the bit-exact port, before the deliberate MIX=127 clamp (see deviations)."
+  },
+  "deviations": [
+    {
+      "id": "mix127_full_wet_clamp",
+      "location": "ChorusCore.cpp mix stage, after P:$1477CF (x0 = y:(r6+$7))",
+      "description": "User decision: MIX=127 must give 100% wet. ROM computes x0=127*65536=0x7f0000 and derives the dry weight as 0x7fffff-x0=0x7fff, leaving ~0.78% dry in the full-wet output. The clamp sets x0=0x7fffff when it equals 0x7f0000, so the dry weight becomes 0 and the output is 0x7fffff/2^23 * wet (<=1 LSB, -138 dB). MIX=0 and all other values are bit-identical to the ROM path.",
+      "pre_clamp_golden_fnv1a64_le24": "7007ca4d75708b0f",
+      "post_clamp_golden_fnv1a64_le24": "5fa13bb709f68782"
+    }
+  ]
 }
