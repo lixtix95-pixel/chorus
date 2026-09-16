@@ -1,0 +1,17 @@
+Native golden hash: 7007ca4d75708b0f; 393216 frames / 0.137939 seconds; real-time load 0.0154702
+CONTROL DEL difference RMS=0.0238943 PASS
+CONTROL DEP difference RMS=0.0268984 PASS
+CONTROL SPD difference RMS=0.0175836 PASS
+CONTROL MIX difference RMS=0.046368 PASS
+CONTROL FB difference RMS=0.0525568 PASS
+CONTROL WID difference RMS=0.0146157 PASS
+CONTROL LP difference RMS=8.25944e-05 PASS
+CONTROL INP difference RMS=0.0555666 PASS
+Adapter 22050 Hz: latency=58 relative RMS error=8.93596e-06 PASS
+Adapter 32000 Hz: latency=69 relative RMS error=0.000165225 PASS
+Adapter 44100 Hz: latency=16 relative RMS error=1.03165e-06 PASS
+Adapter 48000 Hz: latency=87 relative RMS error=0.000147262 PASS
+Adapter 88200 Hz: latency=130 relative RMS error=1.4879e-05 PASS
+Adapter 96000 Hz: latency=139 relative RMS error=0.00011661 PASS
+Adapter 192000 Hz: latency=243 relative RMS error=0.000109961 PASS
+ALL NATIVE TESTS PASSED

@@ -1,0 +1,2 @@
+Compared 103809024 words; mismatches=0 seconds=1.36349
+Reference golden FNV-1a-64=7007ca4d75708b0f
